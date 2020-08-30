@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# Ctlos Linux https://ctlos.github.io
+
+smplayer
+smplayer-skins
+smplayer-themes
+
+### ctlos repo
+## Aur
+calamares-net
+ckbcomp
+mkinitcpio-openswap
+
+qogir-icon-theme-git
+
+## Ctlos pkg
+ctlos-xfce-skel
