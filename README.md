@@ -1,51 +1,8 @@
 # Ctlos Linux iso
 
-Home: https://ctlos.github.io
-
-[![GitHub All Releases](https://img.shields.io/github/downloads/ctlos/ctlosiso/total.svg)](https://ctlos.github.io/get)
-
+## Сделано из профиля baseline, является первой бета-версией проекта.
 ## Создание(build) iso
 
-[Подробная статья в wiki](https://ctlos.github.io/wiki/other/ctlosiso/).
-
-Установить пакеты для сборки.
-
-```bash
-yay -S git arch-install-scripts archiso --noconfirm
-```
-
-Первым параметром указываем de/wm, ориентир файл packages.xfce(de/wm). Вторым версию(любую), иначе не отработает.
-
-В скрипте `autobuild.sh` измените переменную `USER`, на ваше имя пользователя `st`, или оставьте `$(whoami)`.
-
-Измените список пакетов.
-
-- Основные пакеты: packages.x86_64
-- Пакеты относяшиеся к xfce: packages.xfce
-
-В `pacman.conf` указан репозиторий [Ctlos repo](https://github.com/ctlos/ctlos_repo), соответственно пакеты беруться и отсюда `x86_64`.
-
-- Конфиги системы в `/airootfs` это будущий корень.
-- Конфиги пользователя в `/airootfs/etc/skel`.
-- Часть конфигов залетает в систему, через пакеты ctlos, например [ctlos-xfce-skel](https://github.com/ctlos/ctlos-xfce-skel)
-- Основной скрипт генерации `/airootfs/root/customize_airootfs.sh`.
-- Готовый образ и хэши создаются в данной директории `/out`.
-
-```sh
-git clone https://github.com/ctlos/ctlosiso
-cd ctlosiso
-chmod +x {autobuild.sh,build.sh,chroot.sh,mkarchiso}
-sudo ./autobuild.sh xfce 1.7.0
-```
-
-Можно клонировать определенную ветку, с нужным de/wm (xfce/bspwm).
-
-```sh
-git clone -b xfce git@github.com:ctlos/ctlosiso.git
-```
-
-Получить удаленную ветку и переключиться на неё.
-
-```sh
-git checkout -b bspwm origin/bspwm
+[Подробная статья в wiki](https://wiki.archlinux.org/index.php/Archiso)
+[Также хорошая статья](https://www.linux16.ru/articles/backup-s-pomoshhyu-archiso-v-linux.html)
 ```
