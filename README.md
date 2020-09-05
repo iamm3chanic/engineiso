@@ -1,9 +1,6 @@
-# Ctlos Linux iso
+# Engine Linux iso
 
-Home: https://ctlos.github.io
-
-[![GitHub All Releases](https://img.shields.io/github/downloads/ctlos/ctlosiso/total.svg)](https://ctlos.github.io/get)
-
+## Сделано на основе Arch, Ctlos, Arcolinux
 ## Создание(build) iso
 
 [Подробная статья в wiki](https://ctlos.github.io/wiki/other/ctlosiso/).
