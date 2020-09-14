@@ -3,10 +3,10 @@
 set -e -u
 
 iso_name=engineiso
-iso_label="engine-0.9-beta"
+iso_label="engine-1.0.0"
 iso_publisher="Mechanic <http://github.com/iamm3chanic>"
 iso_application="Engine Linux Live/Rescue CD"
-iso_version="0.9-beta"
+iso_version="1.0.0"
 install_dir=arch
 work_dir=work
 out_dir=out
