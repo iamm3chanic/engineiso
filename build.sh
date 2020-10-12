@@ -123,7 +123,7 @@ make_customize_airootfs() {
     tput setaf 3;echo "4. Customize installation (airootfs)";tput sgr0
     echo "###################################################################"
     #ArcoLinux repositories in pacman.conf
-    cp ${script_path}/pacman.conf.work_dir ${work_dir}/x86_64/airootfs/etc/pacman.conf
+    cp ${script_path}/pacman.conf ${work_dir}/x86_64/airootfs/etc/pacman.conf
 
     if [[ -e "${script_path}/airootfs/etc/passwd" ]]; then
         while IFS=':' read -a passwd -r; do
@@ -249,7 +249,7 @@ make_efiboot() {
     mkfs.fat -n ARCHISO_EFI "${work_dir}/iso/EFI/archiso/efiboot.img"
 
     mkdir -p "${work_dir}/efiboot"
-    mount "${work_dir}/iso/EFI/archiso/efiboot.img" "${work_dir}/efiboot"
+    #mount "${work_dir}/iso/EFI/archiso/efiboot.img" "${work_dir}/efiboot"
 
     mkdir -p "${work_dir}/efiboot/EFI/archiso"
     cp "${work_dir}/iso/${install_dir}/boot/x86_64/vmlinuz-linux" "${work_dir}/efiboot/EFI/archiso/"
@@ -271,7 +271,7 @@ make_efiboot() {
         "${work_dir}/efiboot/loader/entries/archiso-x86_64.conf"
 
     # shellx64.efi is picked up automatically when on /
-    cp "${work_dir}/iso/shellx64.efi" "${work_dir}/efiboot/"
+    #!cp "${work_dir}/iso/shellx64.efi" "${work_dir}/efiboot/"
 
     umount -d "${work_dir}/efiboot"
 }
@@ -359,7 +359,7 @@ mkdir -p "${work_dir}"
 run_once make_pacman_conf
 run_once make_custom_airootfs
 run_once make_packages
-run_once make_customize_airootfs
+#run_once make_customize_airootfs
 run_once make_boot
 run_once make_boot_extra
 run_once make_syslinux
