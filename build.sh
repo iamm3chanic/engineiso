@@ -356,16 +356,29 @@ done
 
 mkdir -p "${work_dir}"
 
-run_once make_pacman_conf
-run_once make_custom_airootfs
-run_once make_packages
+make_pacman_conf
+make_custom_airootfs
+make_packages
+make_customize_airootfs
+make_boot
+make_boot_extra
+make_syslinux
+make_isolinux
+make_efi
+make_efiboot
+make_prepare
+make_iso
+make_checks
+make_pacman_conf
+#run_once make_custom_airootfs
+#run_once make_packages
 #run_once make_customize_airootfs
-run_once make_boot
-run_once make_boot_extra
-run_once make_syslinux
-run_once make_isolinux
-run_once make_efi
-run_once make_efiboot
-run_once make_prepare
-run_once make_iso
-run_once make_checks
+#run_once make_boot
+#run_once make_boot_extra
+#run_once make_syslinux
+#run_once make_isolinux
+#run_once make_efi
+#run_once make_efiboot
+#run_once make_prepare
+#run_once make_iso
+#run_once make_checks

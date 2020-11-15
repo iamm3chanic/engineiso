@@ -2,8 +2,8 @@
 
 # gpg --detach-sign Ctlos.iso
 
-USER="st"
-iso_name=ctlos
+USER="liveuser"
+iso_name=engine
 iso_de=mini
 iso_version=$(date +%Y%m%d)
 
